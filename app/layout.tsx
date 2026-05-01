@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { DM_Sans, Playfair_Display } from "next/font/google";
 import { SiteFooter } from "@/components/site-footer";
+import { SiteDisclaimer } from "@/components/site-disclaimer";
 import { SiteHeader } from "@/components/site-header";
 import "./globals.css";
 
@@ -35,6 +36,7 @@ export default function RootLayout({
       className={`${playfair.variable} ${dmSans.variable} h-full scroll-smooth antialiased`}
     >
       <body className="grain-page flex min-h-full flex-col">
+        <SiteDisclaimer />
         <SiteHeader />
         <main className="flex min-h-0 flex-1 flex-col">{children}</main>
         <SiteFooter />
